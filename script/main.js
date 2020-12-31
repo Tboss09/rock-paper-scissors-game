@@ -23,9 +23,11 @@ function openRules() {
     }
     //When the Rules Button is clicked again ,thsi happens
 
-    this.style.border = ` 2px solid hsl(229, 25%, 31%)`;
+    this.style.border = ` 3px solid hsl(229, 25%, 31%)`;
     this.style.transition = "0.4s ease border,0.4s ease color"
-    this.style.fontSize = "10px";
+    this.style.fontSize = "12px";
     this.innerHTML = "rules";
+    this.style.fontWeight = "700";
     this.style.color = "#fff";
+    this.style.letterSpacing = "2px";
 }
