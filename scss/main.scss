@@ -1,0 +1,161 @@
+@import"./reset";
+@import"./variables";
+
+@function gradient($grdnt) {
+    @return map-get($gradient, $grdnt);
+}
+
+@function colorz($colorz) {
+    @return map-get($color, $colorz);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: gradient("bg");
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+header {
+    // margin: 10vh auto;
+    max-width: 100%;
+
+    .header {
+        width: 75%;
+        margin: 5vh auto;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 3px solid colorz("headOutline");
+        border-radius: 5px;
+
+        // Logo
+        &__img {
+            img {
+                width: 40%;
+            }
+        }
+
+        // Scores
+        &__score {
+            background: #fff;
+            display: grid;
+            place-items: center;
+            padding: 7.5px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+
+            // SCORES
+            &--title {
+                font-size: 1rem;
+                font-weight: 600;
+                color: colorz("scoreText");
+                letter-spacing: 1px;
+            }
+
+            // 12 Result
+            &--result {
+                color: colorz("darkText");
+                font-size: 3.5rem;
+                font-weight: 700;
+                line-height: 35px;
+            }
+        }
+    }
+}
+
+// Main
+.main {
+    margin-top: 15vh;
+    position: relative;
+
+    &__games {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        &--triangle {
+            position: absolute;
+            width: 120px;
+            height: 100px;
+            left: 50%;
+            transform: translate(-50%, 0px);
+            z-index: -2000;
+        }
+
+        .flex {
+            flex-direction: row;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .game {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            align-items: center;
+            position: relative;
+
+
+            img {
+                object-fit: contain;
+                width:50px;
+                height: 50px;
+                border-radius: 50%;
+                padding: 10px;
+                background: #fff;
+            }
+        }
+
+        &--rock,
+        &--hand {
+            transform: translate(0px, -30px);
+            margin: -10px;
+        }
+
+        &--scissors {
+            background: gradient("rock");
+            width: 100%;
+            height: 100%;
+            transform: translate(0px, 50px);
+
+        }
+
+        // ROck Background
+        &--rock {
+            background: gradient("scissors");
+        }
+
+        &--hand {
+            background: gradient("paper");
+        }
+    }
+
+}
+
+// Rules
+footer {
+    display: grid;
+    place-items: center;
+
+    // align-items: center;
+    button {
+        padding: 10px 20px;
+        background: transparent;
+        outline: none;
+        border-radius: 4px;
+        border: 2px solid colorz("headOutline");
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-top: 25vh;
+        text-align: center;
+    }
+}

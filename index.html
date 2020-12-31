@@ -1,17 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+        <!DOCTYPE html>
+        <html lang="en">
 
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+        <head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
-    
-  </title>
-</head>
-<body>
-    
-</body>
-</html>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <!-- displays site properly based on user's device -->
+
+          <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+          <!-- Fonts -->
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+            rel="stylesheet">
+          <!-- Fonts -->
+          <title>Frontend Mentor | Rock, Paper, Scissors</title>
+          <link rel="stylesheet" href="styles/main.css">
+        </head>
+
+        <body>
+          <!-- Rock paper and scissors starts here -->
+          <header>
+            <div class="header">
+
+              <!-- Header Title  -->
+              <div class="header__img">
+                <img src="images/logo.svg" alt="logo">
+              </div>
+
+              <div class="header__score">
+                <p class="header__score--title">Score</p>
+                <h2 class="header__score--result">12</h2>
+              </div>
+
+            </div>
+          </header>
+          <!-- Main Section -->
+          <main class="main">
+            <article class="main__games">
+              <div class="main__games--triangle">
+                <img src="images/bg-triangle.svg" alt="">
+              </div>
+              <div class="flex">
+
+                <div class=" game main__games--hand">
+                  <img src="images/icon-paper.svg" alt="">
+                </div>
+
+                <div class="game main__games--scissors">
+                  <img src="images/icon-rock.svg" alt="">
+                </div>
+                <div class="game main__games--rock">
+                  <img src="images/icon-scissors.svg" alt="">
+                </div>
+              </div>
+
+            </article>
+          </main>
+          
+          <footer>
+            <div class="rules">
+              <button>rules</button>
+            </div>
+          </footer>
+        </body>
+
+        </html>
