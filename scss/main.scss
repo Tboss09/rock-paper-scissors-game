@@ -16,6 +16,7 @@ html {
 body {
     background: gradient("bg");
     font-family: 'Barlow Semi Condensed', sans-serif;
+
 }
 
 header {
@@ -72,6 +73,34 @@ header {
     margin-top: 15vh;
     position: relative;
 
+    .show__rule {
+        opacity: 0;
+        background: transparent;
+        transition: 0.3s opacity, background 0.3s;
+        position: fixed;
+        z-index: 2000;
+        top: 0;
+        right: 0;
+        width: 100%;
+        left: 0px;
+        bottom: 0;
+        text-align: center;
+        padding-top: 20px;
+
+        img {
+            width: 55vw;
+            transform: translate(2vw, 3vh);
+        }
+
+        &.active {
+            background: white;
+            transition: 0.2s opacity ease-in;
+            opacity: 1;
+
+
+        }
+    }
+
     &__games {
         display: flex;
         justify-content: center;
@@ -80,7 +109,7 @@ header {
         &--triangle {
             position: absolute;
             width: 120px;
-            height: 100px;
+            height: 120px;
             left: 50%;
             transform: translate(-50%, 0px);
             z-index: -2000;
@@ -94,8 +123,8 @@ header {
         }
 
         .game {
-            width: 70px;
-            height: 70px;
+            width: 75px;
+            height: 75px;
             display: flex;
             justify-content: center;
             border-radius: 50%;
@@ -105,10 +134,10 @@ header {
 
             img {
                 object-fit: contain;
-                width:50px;
-                height: 50px;
+                width: 55px;
+                height: 55px;
                 border-radius: 50%;
-                padding: 10px;
+                padding: 12px;
                 background: #fff;
             }
         }
@@ -144,7 +173,10 @@ footer {
     display: grid;
     place-items: center;
 
-    // align-items: center;
+    .rules {
+        z-index: 300000;
+    }
+
     button {
         padding: 10px 20px;
         background: transparent;
