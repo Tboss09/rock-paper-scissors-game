@@ -6,3 +6,9 @@ $gradient :("scissors": linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%)),
 
 // Color
 $color:("darkText":hsl(229, 25%, 31%), "scoreText": hsl(229, 64%, 46%), "headOutline":hsl(217, 16%, 45%));
+
+@mixin flex($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
