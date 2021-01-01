@@ -110,7 +110,6 @@ header {
 
     &__games {
         display: flex;
-        // display: none;
         justify-content: center;
         align-items: flex-start;
 
@@ -177,12 +176,10 @@ header {
 
 //Answer Picked
 .answer {
-
-
     // Answer Picked
     &__picked {
-        max-width: 100%;
         display: none;
+        max-width: 100%;
         // display: flex;
         justify-content: space-evenly;
         align-items: center;

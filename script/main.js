@@ -1,10 +1,12 @@
 //This shows the rules button when clicked
 const showRule = document.querySelector("footer button");
 const rule = document.querySelector(".show__rule ");
+const answerPicked = document.querySelector(".answer__picked");
+
 //This shows the rules button when clicked
 
-//This happens when paper,scissors,rock button is clicked 
-const traingle = document.querySelector(".main_games--triangle");
+//The bg traingle 
+const traingle = document.querySelector(".js-tri img");
 
 //THe div that contains the images(Rock Paper And Scissors)
 const gameContainer = document.querySelector(".js-flex");
@@ -17,8 +19,7 @@ mainGame.forEach(game => {
 
 // When Either Of Them Is Clicked
 function rockOrPaperOrScissorsClicked() {
-    gameContainer.style.display = "none"
-    console.log(this);
+    showStepTwo();
 }
 showRule.addEventListener("click", openRules)
 
@@ -35,7 +36,6 @@ function openRules() {
         this.style.transition = "0.4s ease border,0.4s ease color"
         this.style.color = "hsl(229, 25%, 31%)";
         return;
-
     }
     //When the Rules Button is clicked again (X) ,this happens
 
@@ -46,4 +46,13 @@ function openRules() {
     this.style.fontWeight = "700";
     this.style.color = "#3b4363";
     this.style.letterSpacing = "1px";
+}
+// When rock or paper or scisors is clicked 
+
+function showStepTwo() {
+    gameContainer.style.opacity = "0";
+    gameContainer.style.margin = "0px";
+    traingle.style.opacity = "0";
+    answerPicked.style.display = "flex";
+
 }
